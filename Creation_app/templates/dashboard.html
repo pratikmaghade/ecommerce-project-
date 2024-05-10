@@ -1,0 +1,524 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dashboard</title>
+    <!-- Bootstrap CSS -->
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+      .top-left {
+        position: absolute;
+        top: 20px;
+        left: 80px;
+        font-size: 2rem;
+      }
+        
+      .gradient{
+        background: rgb(252,176,69);
+        background: linear-gradient(90deg, rgba(252,176,69,1) 0%, rgba(253,29,29,1) 23%, rgba(131,58,180,1) 100%);
+        height: 80px;
+        width: 100%;
+      }
+       
+     h4 {
+        font-size: 4.2rem;
+        color: azure;
+        line-height: 2.5;
+        font: italic 1.2em "Fira Sans", serif;  
+    }
+
+    .text-left{
+        position: absolute;
+        top: 311px;
+        left: 663px;  
+    }
+
+    .text-right{
+      position: absolute;
+      top: 255px;
+      right: 600px;
+    }
+
+    h1{
+      font-size: 1.3rem;
+      top: 10px;
+      right: 10px;
+      font: 1em "Fira Sans", sans-serif;
+    }
+
+     .top-right {
+        position: absolute;
+        top: 30px;
+        right: 50px;
+      }
+
+    a {
+      color: white;
+      height: 10px;
+      width: 10px;
+      text-decoration: none;
+    
+    }
+
+    .btn {
+      --bs-btn-padding-x: 2.60rem;
+      --bs-btn-padding-y: 0.500rem;
+      --bs-btn-font-size: 1.5rem;
+      --bs-btn-font-weight: 500; 
+      background-color: transparent;
+      --bs-btn-color: black;  
+      --bs-btn-border-color: white;
+      
+    }
+    .btn:hover {
+      background-color: lightslategrey;
+    }
+
+    img {
+      opacity: 0.5;
+     
+    }
+
+
+    .centered {
+      position: absolute;
+      top: 25%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: black;
+      font-size: 2.5rem;
+      font-family: Georgia, serif;
+      font-weight: 550;
+    }
+   
+    .card{
+      margin-top: -65rem;
+      width: 32rem;
+      height: 9rem;
+      left: 500px;
+      border: none;
+      background-color: transparent;
+    
+    }
+    
+    .btn-warning {
+      width: fit-content;
+      height: 50px;
+      right: 20px;
+      position: absolute;
+      top: -25px;
+      left: 50px;
+     
+      
+      
+    }
+    .btn-success {
+      width: fit-content;
+      height: 50px;
+      position: absolute;
+      top: -25px;
+      right: 80px;
+    
+    }
+
+    .btn-secondary{
+      height: 50px;
+      right: 20px;
+      font-size: 1.5rem;
+    }
+
+    .btn-info{
+      background-color: palevioletred;
+      position: absolute;
+      top: -118px;
+      left: -248px;
+    } 
+    .btn-danger{
+      position: absolute;
+      top: -118px;
+      left: -2px;
+      background-color: palevioletred;
+    }
+    .btn-default{
+      position: absolute;
+      top: -118px;
+      left: 208px;
+      background-color: palevioletred;
+    }
+    .btn-btn{
+      position: absolute;
+      top: -118px;
+      left: 428px;
+      background-color: palevioletred;
+    }
+    .card-group{
+      position: absolute;
+      top: -40px;
+      left: -248px;
+      
+    }
+    p{
+     color:black; 
+     font-weight: 550;
+     margin-left: -32px;
+      
+    }
+    
+    </style>
+  </head>
+
+  <body>
+    <div class="gradient">
+        
+        <div class="top-left" font-size: "4.5rem;" padding = "70px">
+            <h4>Welcome To SB Creations Outlet</h4>
+        </div>
+            {% comment %} <button type="button" class="btn btn-warning pull-right'">Sign Up</button> {% endcomment %}
+        <div class="top-right">
+            <h1>
+              <a href="login/">Collection </a>&nbsp;&nbsp;&nbsp;
+              <a href="login/">Videos</a>&nbsp;&nbsp;&nbsp;
+              <a href="login/">Contact Us</a>&nbsp;&nbsp;&nbsp;
+              <a href="login/">Sign In</a>&nbsp;&nbsp;&nbsp;
+              
+             </h1>
+        </div>
+    </div>
+
+    <div class="container-fluid p-0 m-0" id="body_div">
+      <div id='bg_image'>
+        <img src="{% static 'media/img2.jpg' %}" class="d-block w-100" alt="...">
+      </div>
+      
+      <br>
+      <div class="text" id="tagline">
+        <div class="centered">The World Most Sustainable <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fashion Collection.</div><br>
+      </div>
+      <br>
+      <br>
+      <br>
+      <div class="text-left" id="main_div">
+        <button type="button" onclick="picture()" class="btn btn-primary btn-lg btn-block" tabindex="4" >Images</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="button" onclick="vedio()" id="vedio" class="btn btn-primary btn-lg btn-block" >Videos</button>
+      </div>
+
+      <div class="row" style="display:none;" id="div4">
+          
+        <div class="col-2" style="margin-left: 56px; border-style: groove; width: 22.22%; border-radius: 19px; box-shadow: rgba(0,0,0,0.8) 0 0 10px; margin-top: -32px;">
+          <iframe width="320" height="240" style="margin-top: 3%;" src="https://www.youtube.com/embed/KhzGcim6ues" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;  web-share" allowfullscreen></iframe>
+        </div>
+        <div class="col-2" style="margin-left:25px; border-style: groove;width: 22.22%; border-radius: 19px; box-shadow: rgba(0,0,0,0.8) 0 0 10px; margin-top: -32px;">
+          <iframe  width="320" height="240" style="margin-top: 3%;" src="https://www.youtube.com/embed/q_10XZZAnf8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="col-2" style="margin-left:24px; border-style: groove; width: 22.22%; border-radius: 19px; box-shadow: rgba(0,0,0,0.8) 0 0 10px; margin-top: -32px;">
+          <iframe width="320" height="240" style="margin-top: 3%;" src="https://www.youtube.com/embed/wIlCxesLtd8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      <div class="col-2" style="margin-left:24px; border-style: groove; width: 22.22%; border-radius: 19px; box-shadow: rgba(0,0,0,0.8) 0 0 10px; margin-top: -32px;">
+        <iframe width="320" height="240" style="margin-top: 3%;" src="https://www.youtube.com/embed/vRdOytUoX3c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div> 
+  
+    </div>
+    <br>
+    <br>
+    <div class="row"  style="display:none;" id="div5">
+      <div class="col-2" style="margin-left:55px; border-style: groove; width: 22.22%; border-radius: 19px; box-shadow: rgba(0,0,0,0.8) 0 0 10px;">
+        <iframe width="320" height="240" style="margin-top: 3%;" src="https://www.youtube.com/embed/2idYz7E2tRw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <div class="col-2" style="margin-left:25px; border-style: groove; width: 22.22%; border-radius: 19px; box-shadow: rgba(0,0,0,0.8) 0 0 10px;">
+        <iframe width="320" height="240" style="margin-top: 3%;" src="https://www.youtube.com/embed/S1mvAJYvh34" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <div class="col-2" style="margin-left:24px; border-style: groove; width: 22.22%; border-radius: 19px; box-shadow: rgba(0,0,0,0.8) 0 0 10px;">
+        <iframe width="320" height="240" style="margin-top: 3%;" src="https://www.youtube.com/embed/q6IrQUuA1Z4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <div class="col-2" style="margin-left:24px; border-style: groove; width: 22.22%; border-radius: 19px; box-shadow: rgba(0,0,0,0.8) 0 0 10px;">
+        <iframe  width="320" height="240" style="margin-top: 3%;" src="https://www.youtube.com/embed/-Qv-RH9yTtU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+    </div>
+    <br>
+    <br>
+    <div class="row"  style="display:none;" id="div6">
+      <div class="col-2" style="margin-left:55px; border-style: groove; width: 22.22%; border-radius: 19px; box-shadow: rgba(0,0,0,0.8) 0 0 10px;">
+        <iframe width="320" height="240" style="margin-top: 3%;" src="https://www.youtube.com/embed/L5uLINceNxw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <div class="col-2" style="margin-left:25px; border-style: groove; width: 22.22%; border-radius: 19px; box-shadow: rgba(0,0,0,0.8) 0 0 10px;">
+        <iframe width="320" height="240" style="margin-top: 3%;" src="https://www.youtube.com/embed/AOodpZ0LMF8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <div class="col-2" style="margin-left:24px; border-style: groove; width: 22.22%; border-radius: 19px; box-shadow: rgba(0,0,0,0.8) 0 0 10px;">
+        <iframe width="320" height="240" style="margin-top: 3%;"src="https://www.youtube.com/embed/oIXzcuHif98" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <div class="col-2" style="margin-left:24px; border-style: groove; width: 22.22%; border-radius: 19px; box-shadow: rgba(0,0,0,0.8) 0 0 10px;">
+        <iframe  width="320" height="240" style="margin-top: 3%;" src="https://www.youtube.com/embed/vFa6KAbpAiE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+    </div>
+     
+
+{% comment %} .............................................//////////Images/////...................................... {% endcomment %}
+
+      <div class="card border-success mb-3 mt-6" id="div2" style="display:none"><br>
+        <button type="button" class="btn btn-warning btn-lg btn-block" onclick="custom_modal()">Custom</button>
+        <button type="button" class="btn btn-success btn-lg btn-block" onclick="subdiv()">Redimade</button>  
+      </div>
+
+      {% comment %} <div class="text-left" id="div3" style="display:none">
+        <button type="button" class="btn btn-info btn-lg btn-block" onclick="red_div()" >Lehenga</button>
+        <button type="button" class="btn btn-danger btn-lg btn-block" onclick="red_div1()" >Saree</button>
+        <button type="button" class="btn btn-default btn-lg btn-block" onclick="red_div2()" >Navari</button>
+        <button type="button" class="btn btn-btn btn-lg btn-block" onclick="red_div3()" >Suit's</button>
+      </div>
+     
+      <div class="row" style="margin-top: -71px;;  margin-left: 70px;; display: none;" id="images" >
+        {% for i in list %}
+          <div class="col-sm-5 " style="margin-left: 18px;margin-top: 58px;; margin-right: 43px; border-style: groove; width: 19.22%;
+          height: 331px; border-radius: 19px; box-shadow: rgba(0,0,0,0.8) 0 0 10px; ">
+            <img src="{{i.img.url}}" alt="..." width="250" height="250" style="opacity: 2.5; margin-top: 0.5rem;" value ="{{obj.img}}" ><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{i.dress_name}}&nbsp;&nbsp;&nbsp;&nbsp;Price: {{i.price}}</p> 
+              <a href="/edit_check/{{i.id}}" style="color:blue;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;View More</a>
+               
+          </div>
+        {% endfor %}
+      </div> {% endcomment %}
+    
+
+
+
+
+  </body>
+ 
+  {% comment %} ----------------Modal----------------------------- {% endcomment %}
+
+  <div class="modal fade" id="addmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Requirement</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="name" class="col-form-label">Name:</label>
+              <input type="text" class="form-control" id="name">
+            </div>
+            <div class="mb-3">
+              <label for="email_id" class="col-form-label">Email:</label>
+              <input type="email" class="form-control" id="email">
+            </div>
+            <input type= "hidden" class="form-control" id="message">
+            <div class="mb-3">
+              <label for="mobile" class="col-form-label">Mobile No:</label>
+              <input type="text" class="form-control" id="mobile">
+            </div>
+            <div class="mb-3">
+              <label for="Category" class="col-form-label">Category:</label>
+              <input type="text" class="form-control" id="Category">
+            </div>
+            <div class="mb-3">
+              <label for="colour" class="col-form-label">Colour:</label>
+              <input type="text" class="form-control" id="colour">
+            </div>
+            <div class="mb-3">
+              <label for="size" class="col-form-label">Size:</label>
+              <input type="number" class="form-control" id="size">
+            </div>
+            <div class="mb-3">
+              <label for="cloth_type" class="col-form-label">Type:</label>
+              <input type="text" class="form-control" id="cloth_type">
+            </div>
+            <div class="mb-3">
+              <label for="message-text" class="col-form-label">Message:</label>
+              <textarea class="form-control" id="message-text"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" onclick="send()" id="save_button">Send message</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+    
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js" integrity="sha512-1/RvZTcCDEUjY/CypiMz+iqqtaoQfAITmNSJY17Myp4Ms5mdxPS5UV7iOfdZoxcGhzFbOm6sntTKJppjvuhg4g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>   
+
+   <script>
+    $(document).ready(function () {
+      $(document).bind("keypress", function (e) {
+        if (e.keyCode == 13) {
+          $("#save_button").trigger("click");
+        }
+        
+      });
+    });
+    
+
+    function custom_modal(){
+      $('#addmodal').modal('show')
+      
+    }  
+    
+    function picture() {
+      $("#main_div").hide()
+      $("#div2").show()
+      $("#div3").hide() 
+    }
+
+    function vedio(){
+      document.getElementById("body_div").style.backgroundColor = "#e6e8fa";
+      $("#main_div").hide()
+      $("#bg_image").hide()
+      $("#tagline").hide()
+      $("#div4").show()
+      $("#div5").show()
+      $("#div6").show()
+    }
+
+    function subdiv() {
+      
+      location.href = '/redimade/';
+      
+    }
+
+    function sub1(){
+      $("#di1").hide()
+      $("#di2").show()
+      $("#di3").hide()
+      $("#di4").hide()
+      $("#di5").hide()
+    }
+
+   
+
+
+    function send(){
+      var email = $("#email").val();
+      alert(email)
+      var name = $("#name").val();
+      var mobile = $("#mobile").val();
+      var Category = $("#Category").val();
+      var colour = $("#colour").val();
+      var cloth_type = $("#cloth_type").val();
+      var size = $("#size").val();
+
+
+        if  (email == "") {
+          $("#email_error").show();
+          $("#email").focus();   
+        } else {
+          $.ajax({
+            method: "POST",
+            url: "/send_message/",
+            data: {
+              "email": email,
+              "name": name,
+              "mobile": mobile,
+              "Category": Category,
+              "colour": colour,
+              "cloth_type": cloth_type,
+              "size": size,
+
+              
+            },
+            success: function (response) {
+                console.log(response);
+                if (response['msg'] == "success"){
+                    var message = response['message']
+                    $("#message").val(message)
+                    alert(message)
+                    location.reload()
+                } 
+                
+              },
+          });
+          }
+    }
+
+    {% comment %} function view(){
+      var user_id= $('#user_id').val()
+      var dress_name= $('#dress_name').val()
+      var category= $('#category').val()
+      var size= $('#size').val()
+      var price= $('#price').val()
+      var img= $('#img').val()
+      console.log(dress_name)
+  
+  
+
+
+
+      $.ajax({
+          method : "POST",
+          url : "/check/",
+          data : {
+            'user_id':user_id,
+            'dress_name':dress_name,
+            'category':category,
+            'size':size,
+            'price':price,
+            'img':img,
+
+
+
+      
+          },
+          success : function(response){
+          
+              if (response == "success"){
+          
+                  alert("view picture")
+
+                  
+
+              }
+              
+              else{
+              
+                location.href = '/dashboard/'
+              
+              }
+
+          
+          }
+
+  });
+} {% endcomment %}
+
+    </script> 
+  </html>    
+  
+  
+ 
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    

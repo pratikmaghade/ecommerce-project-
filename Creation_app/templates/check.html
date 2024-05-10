@@ -1,0 +1,265 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dashboard</title>
+    <!-- Bootstrap CSS -->
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+      .top-left {
+        position: absolute;
+        top: 20px;
+        left: 80px;
+        font-size: 2rem;
+      }
+        
+      .gradient{
+        background: rgb(252,176,69);
+        background: linear-gradient(90deg, rgba(252,176,69,1) 0%, rgba(253,29,29,1) 23%, rgba(131,58,180,1) 100%);
+        height: 80px;
+        width: 100%;
+      }
+       
+     h4 {
+        font-size: 4.2rem;
+        color: azure;
+        line-height: 2.5;
+        font: italic 1.2em "Fira Sans", serif;  
+    }
+
+    .text-left{
+        position: absolute;
+        top: 255px;
+        left: 550px;  
+    }
+
+    .text-right{
+      position: absolute;
+      top: 255px;
+      right: 600px;
+    }
+
+    h1{
+      font-size: 1.3rem;
+      top: 10px;
+      right: 10px;
+      font: 1em "Fira Sans", sans-serif;
+    }
+
+     .top-right {
+        position: absolute;
+        top: 30px;
+        right: 50px;
+      }
+
+    a {
+      color: white;
+      height: 10px;
+      width: 10px;
+      text-decoration: none;
+    
+    }
+
+    .btn {
+      --bs-btn-padding-x: 2.60rem;
+      --bs-btn-padding-y: 0.500rem;
+      --bs-btn-font-size: 1.5rem;
+      --bs-btn-font-weight: 500; 
+      background-color: transparent;
+      --bs-btn-color: black;  
+      --bs-btn-border-color: white;
+      
+    }
+    .btn:hover {
+      background-color: lightslategrey;
+    }
+
+    img {
+      opacity: 0.5;
+     
+    }
+
+
+    .centered {
+      position: absolute;
+      top: 25%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: black;
+      font-size: 2.5rem;
+      font-family: Georgia, serif;
+      font-weight: 550;
+    }
+   
+    .card{
+      margin-top: -65rem;
+      width: 32rem;
+      height: 9rem;
+      left: 500px;
+      border: none;
+      background-color: transparent;
+    
+    }
+    
+    .btn-warning {
+      width: fit-content;
+      height: 50px;
+      right: 20px;
+      position: absolute;
+      top: -25px;
+      left: 50px;
+     
+      
+      
+    }
+    .btn-success {
+      width: fit-content;
+      height: 50px;
+      position: absolute;
+      top: -25px;
+      right: 80px;
+    
+    }
+
+    .btn-secondary{
+      height: 50px;
+      right: 20px;
+      font-size: 1.5rem;
+    }
+
+    .btn-info{
+      background-color: palevioletred;
+      position: absolute;
+      top: -118px;
+      left: -248px;
+    } 
+    .btn-danger{
+      position: absolute;
+      top: -118px;
+      left: -2px;
+      background-color: palevioletred;
+    }
+    .btn-default{
+      position: absolute;
+      top: -118px;
+      left: 208px;
+      background-color: palevioletred;
+    }
+    .btn-btn{
+      position: absolute;
+      top: -118px;
+      left: 428px;
+      background-color: palevioletred;
+    }
+    .card-group{
+      position: absolute;
+      top: -40px;
+      left: -248px;
+      
+    }
+    h2{
+      color: black;
+      font-weight: 550;
+      margin-top: -578px;
+      margin-left: 611px;
+      font-style: italic;
+      font-size: x-large;
+      
+    }
+    p{
+      color: black;
+      font-weight: 450;
+      margin-top: 14px;
+      margin-left: 635px;
+      font-style: italic;
+      font-size: larger;
+    }
+    
+    
+    </style>
+  </head>
+
+  <body>
+    <div class="gradient">
+        
+        <div class="top-left" font-size: "4.5rem;" padding = "70px">
+            <h4>Welcome To SB Creations Outlet</h4>
+        </div>
+            {% comment %} <button type="button" class="btn btn-warning pull-right'">Sign Up</button> {% endcomment %}
+        <div class="top-right">
+            <h1>
+              <a href="login/">Collection </a>&nbsp;&nbsp;&nbsp;
+              <a href="login/">Videos</a>&nbsp;&nbsp;&nbsp;
+              <a href="login/">Contact Us</a>&nbsp;&nbsp;&nbsp;
+              <a href="login/">Sign In</a>&nbsp;&nbsp;&nbsp;
+              
+             </h1>
+        </div>
+    </div>
+  
+ 
+    <input type="hidden" id ="user_id" value="{{id}}">
+    
+    <div class="row" style=" margin-top: -44px; " id="img" onclick="image()" >
+      
+      <div class="col-sm-5 " style="margin-left: 2px;    margin-top: 50px; margin-right: 26px; border-style: groove;width: 112.22%;
+        height: 654px; border-radius: 19px; box-shadow: rgba(0,0,0,0.8) 0 0 10px; ">
+        <img src="{{obj.img.url}}" alt="..." width="700" height="640" style="opacity: 2.5;    margin-top: 0.5rem;" value ="{{obj.img.id}}" >
+        <button type="button"  class="btn btn-primary btn-lg btn-block"  style="    margin-top: 513px;
+        margin-left: 150px;    background-color: #c0e1c9;" >Add To Cart</button>
+        
+        {% comment %} <form action='{% url 'charge' %}' method='POST'>
+          {% csrf_token %} {% endcomment %}
+          <script src="https://checkout.stripe.com/v3/checkout.js" class="stripe-button"data-key="{{KEY}}" data-amount="500" data-locale="auto" data-description="Payment Gateway"  id="11" style="display: none;">
+          </script>
+        {% comment %} </form> {% endcomment %}
+      </div>
+      
+      
+    </div>
+   
+    <div class="container"  id="img1" >
+      <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{obj.dress_name}}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Price: {{obj.price}}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Category: {{obj.category}}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Size: {{obj.size}} <hr style="width: 95%;
+        margin-left: 22px;"></h2><p>&nbsp;&nbsp;&nbsp;&nbsp;Care Instructions: Hand Wash Only<br>&nbsp;&nbsp;&nbsp;&nbsp;Fit Type: Regular<br>&nbsp;&nbsp;&nbsp;&nbsp;Saree Fabric:-Cotton Silk,Blouse Fabric :-Cotton Silk<br>&nbsp;&nbsp;&nbsp;&nbsp;Color : This Amazing Saree have Soft Finished Pink colour which make you &nbsp;&nbsp;&nbsp;&nbsp;look awesome and star of Party.<br>&nbsp;&nbsp;&nbsp;&nbsp;Length :- Saree Length is 5.5 Meter and Blouse Length is is 0.80 Meter.<br>&nbsp;&nbsp;&nbsp;&nbsp;Product color may slightly vary due to photographic lighting sources on your &nbsp;&nbsp;&nbsp;&nbsp;monitor settings or device setting and lighting used in mode.</p>
+      
+      
+    </div>
+</body>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js" integrity="sha512-1/RvZTcCDEUjY/CypiMz+iqqtaoQfAITmNSJY17Myp4Ms5mdxPS5UV7iOfdZoxcGhzFbOm6sntTKJppjvuhg4g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>   
+<script src="https://checkout.stripe.com/v3/checkout.js"></script>
+<script src="https://js.stripe.com/v3"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
+
+
+           
+<script>
+    $(document).ready(function () {
+    $(document).bind("keypress", function (e) {
+        if (e.keyCode == 13) {
+        $("#save_button").trigger("click");
+        }
+          
+        });
+      });
+
+      function image(){
+        $("#btn_1").show()
+        $("#img2").show()  
+      }
+
+      function payement(){
+        $("#img").hide()
+        $("#11").show()
+
+      }
+</script>
